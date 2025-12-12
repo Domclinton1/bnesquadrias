@@ -1,46 +1,103 @@
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
-  background: #f1f1f1;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.thankyou {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
+body{
+    position: relative; /* necessário para o overlay */
+    padding: 80px 20px;
+
+    /* Background */
+    background-image: url(../assets/images/banner-hero.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    /* Altura */
+    min-height: 85vh;
+
+    /* Deixa o conteúdo acima do overlay */
+    z-index: 1;
+
+    justify-content: center;
+    align-items:center ;
+    display: flex;
 }
+
+/* === OVERLAY SOMBREADO === */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* Ajuste aqui o nível de sombra */
+    backdrop-filter: blur(1px); /* opcional: deixa mais premium */
+    z-index: -1; /* fica atrás do conteúdo */
+}
+
 
 .thankyou-container {
   max-width: 550px;
   width: 100%;
 }
 
+
 .card {
-  background: #fff;
-  padding: 3rem 2rem;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 80px 20px;
+
+    /* Background */
+    background-image: url('../assets/icons/logo-bn-esquadrias-2.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 18px;
+    overflow: hidden;
+    
 }
+
+
+/* === OVERLAY SOMBREADO === */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);  /* pode ajustar entre 0.30 - 0.55 */
+    z-index: 0;
+}
+.card * {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .check-icon {
   width: 80px;
   margin-bottom: 1rem;
+  border-radius: 50%;
+  margin: 10px auto;
 }
 
 .card h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  color: gold;
 }
 
 .card p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: #fff;
 }
 
 .subtext {
@@ -50,16 +107,18 @@ body {
 }
 
 .whats-btn {
-  display: inline-block;
+  display: flex;
   background: #25d366;
   padding: 1rem 1.6rem;
   border-radius: 50px;
   color: #fff;
+  font-size: 1.3rem;
+  text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
   margin-top: 1rem;
-  font-size: 1rem;
   transition: .2s;
+
 }
 
 .whats-btn:hover {
@@ -69,12 +128,65 @@ body {
 .back-home {
   display: block;
   margin-top: 1.4rem;
-  text-decoration: none;
   font-weight: 600;
-  color: #333;
+  color: #fff;
+
   transition: 0.2s;
 }
 
 .back-home:hover {
-  color: #000;
+  color: gold;
+}
+.cta-button {
+    background: linear-gradient(90deg,
+        #d0f5e4 0%,
+        #8de4b6 20%,
+        #3acb80 40%,
+        #0ca95a 60%,
+        #3acb80 80%,
+        #d0f5e4 100%
+    );
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 12px;
+    color: #083b1f;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+  flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o texto e o ícone */
+    font-size: 1.2em;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transition: 0.2s ease-in-out;
+}
+.cta-button:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+@media screen and (max-width: 768px) {
+  
+  .card{
+    padding: 10px;
+  }
+  .card h1 {
+    font-size: 2rem;
+  }
+  .card p {
+    font-size: 1.3em;
+    line-height: 1;
+  }
+  .cta-button {
+    font-size: 0.8em;
+    gap: 0.7;
+  }
+  .cta-button svg {
+    width: 18px;
+  }
 }
