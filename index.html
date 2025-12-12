@@ -119,50 +119,38 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
 </div>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-text">
-                <h1>Esquadrias de <span>Alumínio</span></h1>
-                <p>Alumínio de Alta Durabilidade, Instalação Rápida e Acabamento Premium para Sua Obra</p>
-                <em>Mais de 450 obras concluídas em MG</em>
+            <section class="hero">
+    <div class="container">
+        <div class="hero-text">
+            <h1>Esquadrias de <span>Alumínio</span></h1>
+            <p>Alumínio de Alta Durabilidade, Instalação Rápida e Acabamento Premium para Sua Obra</p>
+            <em>Mais de 450 obras concluídas em MG</em>
 
-                <a href="https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...
-" target="_blank" class="cta-button">Solicitar orçamento pelo Whatsapp</a>
-            </div>
-            <div class="hero-form">
-                <form id="whatsappForm">
-              <h3>Peça Seu Orçamento em 1 Minuto</h3>
-              <label>Nome:</label>
-              <input
-                type="text"
-                id="nome"
-                placeholder="Digite seu nome..."
-                required
-              />
-            
+            <a href="#" id="btnWhatsCta" class="cta-button">
+                Solicitar orçamento pelo Whatsapp
+            </a>
+        </div>
 
-              <label>Endereço da obra:</label>
-              <input
-                type="text"
-                id="endereco"
-                placeholder="Digite o endereço da obra"
-                required
-              />
+        <div class="hero-form">
+            <form id="whatsappForm">
+                <h3>Peça Seu Orçamento em 1 Minuto</h3>
 
-              <label>Mensagem:</label>
-              <textarea
-                id="mensagem"
-                placeholder="Descreva o tipo de esquadria que sua obra precisa"
-                required
-              ></textarea>
+                <label>Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome..." required/>
 
-              <button type="submit" 
-           
-   >Enviar para o WhatsApp</button>
+                <label>Endereço da obra:</label>
+                <input type="text" id="endereco" placeholder="Digite o endereço da obra" required/>
+
+                <label>Mensagem:</label>
+                <textarea id="mensagem" placeholder="Descreva o tipo de esquadria que sua obra precisa" required></textarea>
+
+                <button type="submit">Enviar para o WhatsApp</button>
             </form>
-            </div>
-            </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+
         <section class="especialidades" id="especialidades">
         <div class="container">
 
@@ -666,5 +654,34 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
 </div>
 
     <script src="script.js"></script>
+   
+    <script>
+    // Botão do Hero
+    document.getElementById("btnWhatsCta").addEventListener("click", function(e) {
+        e.preventDefault();
+
+        const msg = "Olá, gostaria de fazer um orçamento...";
+        localStorage.setItem("mensagemWhatsApp", msg);
+
+        window.location.href = "/pages/thankyou.html";
+    });
+
+    // Formulário
+    document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const endereco = document.getElementById("endereco").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        const textoFinal = `Olá! Meu nome é ${nome}. Endereço da obra: ${endereco}. Detalhes: ${mensagem}`;
+
+        localStorage.setItem("mensagemWhatsApp", textoFinal);
+
+        window.location.href = "/pages/thankyou.html";
+    });
+</script>
+
+
 </body>
 </html>

@@ -96,7 +96,8 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
         <h1>BN Esquadrias agradece pelo seu contato</h1>
         <p>Olá, você será redirecionado para nosso<strong>WhatsApp</strong></p>
 
-        <p class="subtext">Se você não for redirecionado em 5 segundos, clique no botão do WhatsApp abaixo</p>
+        <p class="subtext">Você será redirecionado em <strong>5</strong> segundos...</p>
+
 
         <a href="https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...
 " target="_blank" class="cta-button">
@@ -111,7 +112,33 @@ Solicitar orçamento pelo Whatsapp
 
     </div>
   </section>
-    
+    <script>
+  // URL do WhatsApp com a mensagem padrão
+  const whatsappURL = "https://wa.me/5531973222912?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento...";
+
+  // Tempo até o redirecionamento
+  let countdown = 5;
+
+  const subtext = document.querySelector(".subtext");
+
+  const timer = setInterval(() => {
+    countdown--;
+    subtext.innerHTML = `Você será redirecionado em <strong>${countdown}</strong> segundos...`;
+
+    if (countdown <= 0) {
+      clearInterval(timer);
+      window.location.href = whatsappURL;
+    }
+  }, 1000);
+</script>
+<script>
+    setTimeout(() => {
+        const mensagem = localStorage.getItem("mensagemWhatsApp") || "Olá, gostaria de fazer um orçamento.";
+        const url = `https://wa.me/5531973222912?text=${encodeURIComponent(mensagem)}`;
+        window.location.href = url;
+    }, 5000);
+</script>
+
 </body>
 </html>
 

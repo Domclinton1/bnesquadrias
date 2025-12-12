@@ -165,3 +165,6 @@ faqItems.forEach(item => {
     });
 });
 document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+
+   
