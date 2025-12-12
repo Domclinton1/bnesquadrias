@@ -100,3 +100,68 @@ lightbox.addEventListener("click", (e) => {
         lightbox.style.display = "none";
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const items = document.querySelectorAll(".carousel-item");
+    const dots = document.querySelectorAll(".dot");
+
+    let index = 0;
+
+    function showSlide(i) {
+        items.forEach(item => item.classList.remove("active"));
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        items[i].classList.add("active");
+        dots[i].classList.add("active");
+    }
+
+    function nextSlide() {
+        index = (index + 1) % items.length;
+        showSlide(index);
+    }
+
+    // Carrossel automático (a cada 3s)
+    let interval = setInterval(nextSlide, 3000);
+
+    // Clicar nas bolinhas
+    dots.forEach(dot => {
+        dot.addEventListener("click", () => {
+            clearInterval(interval);
+            index = parseInt(dot.dataset.index);
+            showSlide(index);
+            interval = setInterval(nextSlide, 3000);
+        });
+    });
+
+});
+
+function iniciarContador() {
+    const dataFinal = new Date("2025-12-19T23:59:59").getTime();
+
+    setInterval(() => {
+        const agora = new Date().getTime();
+        const diff = dataFinal - agora;
+
+        const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").textContent =
+            `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    }, 1000);
+}
+
+iniciarContador();
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+    const btn = item.querySelector(".faq-question");
+
+    btn.addEventListener("click", () => {
+        item.classList.toggle("active");
+    });
+});
+document.getElementById("currentYear").textContent = new Date().getFullYear();

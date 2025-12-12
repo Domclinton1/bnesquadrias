@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #222;
+}
+
+/* HEADER */
+.oferta-header {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    gap: 1rem;
+    justify-content: space-between;
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+    transition: top .4s ease;
+}
+
+.voltar {
+    color: #ffd53a;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    border-radius: 50%;
+    height: 50px;
+    margin-right: 30px;
+}
+
+/* HERO */
+.hero-oferta {
+    
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-oferta h1 {
+    font-size: 2.6rem;
+}
+
+.hero-oferta h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.cta-hero {
+    display: inline-block;
+    margin-top: 25px;
+    background: #ffd53a;
+    color: #202020;
+    padding: 14px 35px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.cta-hero:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* CONTADOR */
+#timer {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* BENEFÍCIOS */
+.beneficios-oferta {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.beneficios-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.beneficio {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+/* COMPARATIVO */
+.comparativo {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.comparativo-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.comparativo-wrapper img {
+    width: 45%;
+    border-radius: 12px;
+}
+
+/* GALERIA */
+.galeria-oferta {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.galeria-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* CTA FINAL */
+.cta-final {
+    background: #002d6b;
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.cta-final-btn {
+    background: #ffd53a;
+    padding: 16px 42px;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.cta-final-btn:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
