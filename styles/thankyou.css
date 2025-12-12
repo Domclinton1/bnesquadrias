@@ -1,0 +1,80 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f1f1f1;
+}
+
+.thankyou {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.thankyou-container {
+  max-width: 550px;
+  width: 100%;
+}
+
+.card {
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.check-icon {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.card h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.subtext {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.whats-btn {
+  display: inline-block;
+  background: #25d366;
+  padding: 1rem 1.6rem;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: .2s;
+}
+
+.whats-btn:hover {
+  background: #1ebe57;
+}
+
+.back-home {
+  display: block;
+  margin-top: 1.4rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  transition: 0.2s;
+}
+
+.back-home:hover {
+  color: #000;
+}
