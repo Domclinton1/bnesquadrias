@@ -215,6 +215,8 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1rem;
+    flex: 1;
 }
 .hero-text h1 {
     font-size: 4rem;
@@ -231,7 +233,12 @@ nav a {
     font-size: 1.5rem;
     color: #fff;
 }
-
+.hero-text .cta-button {
+    margin: 0;
+}
+.hero-form {
+    flex: 1;
+}
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -246,6 +253,7 @@ nav a {
         background-attachment: scroll;
         padding: 10px;
         background-attachment: fixed;
+        
     }
     .hero h1 {
         font-size: 2rem;
@@ -263,23 +271,39 @@ nav a {
         background: rgba(0, 0, 0, 0.55);
     }
     .hero .container {
-        margin-top: 100px;
-    }
-    .hero .container {
         max-width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+        margin-top: 100px;
         
     }
+    .hero-text {
+        justify-content: center;
+        align-items: center
+
+    }
+    .hero-text .cta-button {
+        margin: 20px auto
+    }
+   
     .cta-button {
         margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .galeria-grid {
         padding: 20px;
     }
-    
+    .contato-map {
+        max-width: 100%;
+        flex: 1;
+    }
+    .contato-map iframe {
+        max-width: 768px;
+        width: 100%;
+    }
 }
 
 .logo img {
@@ -553,6 +577,8 @@ textarea {
 .review-name {
   font-weight: 600;
   margin: 0;
+  color: #3367d6;
+  font-size: 1.2rem;
 }
 
 .review-stars {
