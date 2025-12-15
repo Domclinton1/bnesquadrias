@@ -6,6 +6,7 @@
     <title>Oferta do Mês – BN Esquadrias</title>
 
     <meta name="description" content="Aproveite a oferta exclusiva da BN Esquadrias! 20% OFF em todas as peças de alumínio até 19/12. Atendimento em toda Minas Gerais. Solicite orçamento agora!">
+    <link rel="icon" href="../assets/icons/logo-bn-esquadrias-2.jpeg">
 
     <link rel="stylesheet" href="../styles/oferta-do-mes.css">
     <link rel="stylesheet" href="../style.css">
@@ -17,6 +18,22 @@
   gtag('js', new Date());
 
   gtag('config', 'G-X7NF8922DP');
+</script>
+<!-- Event snippet for Contato conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17795398162/ZTbSCNaiodAbEJL0wKVC',
+      'event_callback': callback
+  });
+  return false;
+}
 </script>
     <!-- Meta Pixel Code -->
 <script>
@@ -37,16 +54,19 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 </head>
 <body>
+<div class="page-overlay"></div>
 
     <header class="oferta-header">
         <a href="../index.html" class="voltar">← Voltar</a>
         <img src="../assets/icons/logo-bn-esquadrias-2.jpeg" class="logo">
     </header>
 
-    <!-- HERO -->
+    <main>
+      <!-- HERO -->
     <section class="hero-oferta">
         <div class="hero-content">
-            <h1>🔥 Oferta Especial do Mês</h1>
+            <h1>🔥 Oferta 🔥
+              <br> Especial do Mês</h1>
             <h2>20% de desconto em todas as esquadrias de alumínio</h2>
             <p>Promoção válida até <strong>19/12</strong> para toda Minas Gerais.</p>
 
@@ -55,7 +75,7 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
                 <div id="timer">00d 00h 00m 00s</div>
             </div>
 
-            <a href="https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento..." class="cta-hero">Solicitar Orçamento</a>
+            <a href="#" class="cta-hero" onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')">Solicitar Orçamento</a>
         </div>
     </section>
 
@@ -111,16 +131,17 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
     <!-- CTA FINAL -->
     <section class="cta-final">
         <h2>A oferta termina em breve! Aproveite antes do dia 19/12.</h2>
-        <a href="https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento..." class="cta-final-btn">Chamar no WhatsApp</a>
+        <a href="#" onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')" class="cta-final-btn">Chamar no WhatsApp</a>
     </section>
+    </main>
 
     <footer class="site-footer">
   <div class="footer-container">
 
     <div class="footer-col logo-endereco">
-      <img src="./assets/icons/logo-bn-esquadrias-2.jpeg" alt="BN Esquadrias Logo" class="footer-logo" />
+      <img src="../assets/icons/logo-bn-esquadrias-2.jpeg" alt="BN Esquadrias Logo" class="footer-logo" />
       <p>Rua General José Maria, 220 — Belo Horizonte, MG</p>
-      <p>Telefone / WhatsApp: <a href="https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento..." target="_blank"> (31) 97322-2912</a></p>
+      <p>Telefone / WhatsApp: <a href="#" onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')"> (31) 97322-2912</a></p>
     </div>
 
     <div class="footer-col links-uteis">
@@ -137,7 +158,7 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
     <div class="footer-col redes-sociais">
       <h4>Redes Sociais</h4>
       <div class="social-buttons">
-        <a href="https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento..." target="_blank" class="social-btn whatsapp">WhatsApp</a>
+        <a href="#" onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')" class="social-btn whatsapp">WhatsApp</a>
         <a href="https://www.facebook.com/profile.php?id=61581879797985" target="_blank" class="social-btn facebook">Facebook</a>
         <a href="https://www.instagram.com/bn_esquadriasbh/" target="_blank" class="social-btn instagram">Instagram</a>
         <!--<a href="https://www.linkedin.com/in/seu-perfil" target="_blank" class="social-btn linkedin">LinkedIn</a>-->

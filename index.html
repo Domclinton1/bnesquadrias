@@ -78,6 +78,24 @@
 
   gtag('config', 'AW-17795398162');
 </script>
+
+<!-- Event snippet for Contato conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17795398162/ZTbSCNaiodAbEJL0wKVC',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -103,7 +121,7 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
     </div>
 
     <nav class="desktop-menu">
-        <a href="#services">Serviços</a>
+        <a href="#servicos">Serviços</a>
         <a href="#galeria">Galeria</a>
         <a href="#provas-sociais">Provas Sociais</a>
         <a href="#sobre-nos">Quem somos</a>
@@ -140,7 +158,7 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
             <p>Alumínio de Alta Durabilidade, Instalação Rápida e Acabamento Premium para Sua Obra</p>
             <em>Mais de 450 obras concluídas em MG</em>
 
-            <a href="#" id="btnWhatsCta" class="cta-button">
+            <a href="#" id="btnWhatsCta" class="cta-button" onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')">
                 Solicitar orçamento pelo Whatsapp
             </a>
         </div>
@@ -247,8 +265,7 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
             </div>
 
             </div>
-            <a href="https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...
-" target="_blank" class="cta-button">Solicitar orçamento pelo Whatsapp</a>
+            <a href="#"  class="cta-button" onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')">Solicitar orçamento pelo Whatsapp</a>
         </div>
     
         </section>
@@ -301,8 +318,7 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
                 <img src="./assets/images/WhatsApp Image 2025-12-08 at 14.43.02.jpeg" alt="Projeto completo de esquadrias em residência de alto padrão">
             </div>
         </div>
-        <a href="https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...
-" target="_blank" class="cta-button">Solicitar orçamento pelo Whatsapp</a>
+        <a href="#" onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')" class="cta-button">Solicitar orçamento pelo Whatsapp</a>
     </div>
     
 </section>
@@ -414,8 +430,7 @@ src="https://www.facebook.com/tr?id=1641762510321408&ev=PageView&noscript=1"
             
         </div>
 
-        <a href="https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...
-" target="_blank" class="cta-button">Solicitar orçamento pelo Whatsapp</a>
+        <a href="#" class="cta-button" onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')">Solicitar orçamento pelo Whatsapp</a>
     </div>
 </section>
     <section class="oferta-especial" id="oferta-limitada">

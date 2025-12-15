@@ -1,9 +1,38 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     background: #000;
-    color: #222;
 }
+main {
+    color: #222;
+    background-image: url(../assets/images/banner-hero.png);
+     background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    /* Sombra externa elegante */
+   
+}
+
+h1, h2, h3, h4, .cta-final, footer, .cta-final-btn, .hero-oferta, .beneficio{
+  position: relative;
+  z-index: 2;
+}
+
+
+.page-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  z-index: 1;
+  pointer-events: none; /* não bloqueia cliques */
+}
+
 
 /* HEADER */
 .oferta-header {
@@ -56,6 +85,14 @@ body {
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+}
 
 .cta-hero {
     display: inline-block;
@@ -87,14 +124,17 @@ body {
     padding: 60px 20px;
     text-align: center;
 }
-
+.beneficios-oferta h2 {
+    font-size: 1.6rem;
+}
 .beneficios-grid {
     max-width: 1100px;
     margin: auto;
     display: grid;
     gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr)
 }
+
 
 .beneficio {
     background: white;
