@@ -217,17 +217,7 @@
         }
       }, 1000);
     </script>
-    <script>
-      setTimeout(() => {
-        const mensagem =
-          localStorage.getItem("mensagemWhatsApp") ||
-          "Olá, gostaria de fazer um orçamento.";
-        const url = `https://wa.me/5531973222912?text=${encodeURIComponent(
-          mensagem
-        )}`;
-        window.location.href = url;
-      }, 3000);
-    </script>
+
     <script>
       const numero = sessionStorage.getItem("wpp_numero");
       const texto = sessionStorage.getItem("wpp_texto");
