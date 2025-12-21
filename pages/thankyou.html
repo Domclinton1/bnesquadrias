@@ -217,16 +217,27 @@
         }
       }, 1000);
     </script>
-
+    <script>
+      setTimeout(() => {
+        const mensagem =
+          localStorage.getItem("mensagemWhatsApp") ||
+          "Olá, gostaria de fazer um orçamento.";
+        const url = `https://wa.me/5531973222912?text=${encodeURIComponent(
+          mensagem
+        )}`;
+        window.location.href = url;
+      }, 3000);
+    </script>
     <script>
       const numero = sessionStorage.getItem("wpp_numero");
       const texto = sessionStorage.getItem("wpp_texto");
 
-      if (!numero || !texto) {
-        window.location.href = "/";
-      }
-
       setTimeout(() => {
+        if (!numero || !texto) {
+          window.location.href = "https://wa.me/5537999095351";
+          return;
+        }
+
         const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
         window.location.href = url;
       }, 3000);

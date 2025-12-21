@@ -252,7 +252,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 required
               ></textarea>
 
-              <button type="submit">Enviar para o WhatsApp</button>
+              <button type="button" id="btnEnviar">
+                Enviar para o WhatsApp
+              </button>
             </form>
           </div>
         </div>
@@ -980,24 +982,54 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
           window.location.href = "/pages/thankyou.html";
         });
-
-      // Formulário
+    </script>
+    <script>
       document
-        .getElementById("whatsappForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+        .getElementById("btnEnviar")
+        .addEventListener("click", function () {
+          const nome = document.getElementById("nome").value.trim();
+          const endereco = document.getElementById("endereco").value.trim();
+          const mensagem = document.getElementById("mensagem").value.trim();
 
-          const nome = document.getElementById("nome").value;
-          const endereco = document.getElementById("endereco").value;
-          const mensagem = document.getElementById("mensagem").value;
+          if (!nome || !endereco || !mensagem) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+          }
 
-          const textoFinal = `Olá! Meu nome é ${nome}. Endereço da obra: ${endereco}. Detalhes: ${mensagem}`;
+          const numero = "5537999095351";
 
-          localStorage.setItem("mensagemWhatsApp", textoFinal);
+          const texto = `Olá! Gostaria de solicitar um orçamento.
 
-          window.location.href = "/pages/thankyou.html";
+Nome: ${nome}
+Endereço da obra: ${endereco}
+Mensagem:
+${mensagem}`;
+
+          try {
+            sessionStorage.setItem("wpp_numero", numero);
+            sessionStorage.setItem("wpp_texto", texto);
+          } catch (e) {
+            console.warn("SessionStorage falhou");
+          }
+
+          // Conversões
+          if (typeof fbq !== "undefined") {
+            fbq("track", "Contact");
+          }
+
+          if (typeof gtag !== "undefined") {
+            gtag("event", "conversion", {
+              send_to: "AW-17795398162/ZTbSCNaiodAbEJL0wKVC",
+            });
+          }
+
+          // pequeno delay para garantir gravação (mobile)
+          setTimeout(() => {
+            window.location.href = "../pages/thankyou.html";
+          }, 300);
         });
     </script>
+
     <script>
       (async function detectarCidade() {
         try {
