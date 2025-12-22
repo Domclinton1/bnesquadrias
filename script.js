@@ -39,53 +39,6 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
-document
-  .getElementById("whatsappForm")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const nome = document.getElementById("nome").value.trim();
-    const endereco = document.getElementById("endereco").value.trim();
-    const mensagem = document.getElementById("mensagem").value.trim();
-
-    if (!nome || !endereco || !mensagem) {
-      alert("Por favor, preencha todos os campos.");
-      return;
-    }
-
-    const numero = "5531973222912";
-
-    const texto = `Olá! Gostaria de solicitar um orçamento.
-
-Nome: ${nome}
-Endereço da obra: ${endereco}
-Mensagem:
-${mensagem}`;
-
-    // 🔐 salva para a página de obrigado
-    sessionStorage.setItem("wpp_numero", numero);
-    sessionStorage.setItem("wpp_texto", texto);
-
-    /* ======================
-       CONVERSÕES
-    ====================== */
-
-    // Meta Pixel
-    if (typeof fbq !== "undefined") {
-      fbq("track", "Contact");
-    }
-
-    // Google Ads (SEM redirect)
-    if (typeof gtag !== "undefined") {
-      gtag("event", "conversion", {
-        send_to: "AW-17795398162/ZTbSCNaiodAbEJL0wKVC",
-      });
-    }
-
-    // redireciona para obrigado
-    window.location.href = "../pages/thankyou.html";
-  });
-
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeBtn = document.querySelector(".lightbox-close");
