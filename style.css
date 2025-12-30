@@ -173,11 +173,21 @@ nav a {
   margin-top: 12px;
   padding: 10px 14px;
   background: rgba(255, 255, 255, 0.08);
-  border-left: 4px solid #25d366;
-  border-right: 4px solid #25d366;
+  border-left: 4px solid;
+  border-right: 4px solid
+    linear-gradient(
+      90deg,
+      #e6e9eb 0%,
+      #c5c8cc 20%,
+      #a7aaae 40%,
+      #7d8084 60%,
+      #c5c8cc 80%,
+      #e6e9eb 100%
+    );
   color: #f1f1f1;
   font-size: 14px;
   border-radius: 6px;
+  max-width: fit-content;
 }
 
 .hero {
