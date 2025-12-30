@@ -1022,6 +1022,11 @@ ${mensagem}`;
               send_to: "AW-17795398162/ZTbSCNaiodAbEJL0wKVC",
             });
           }
+
+          // pequeno delay para garantir gravação (mobile)
+          setTimeout(() => {
+            window.location.href = "../pages/thankyou.html";
+          }, 300);
         });
     </script>
 
