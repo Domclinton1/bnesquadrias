@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <!-- META ESSENCIAIS -->
@@ -148,7 +148,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         window,
         document,
         "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
+        "https://connect.facebook.net/en_US/fbevents.js",
       );
       fbq("init", "1641762510321408");
       fbq("track", "PageView");
@@ -219,7 +219,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               href="#"
               id="btnWhatsCta"
               class="cta-button"
-              onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')"
+              onclick="
+                return gtag_report_conversion(
+                  'https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...',
+                );
+              "
             >
               Solicitar orçamento pelo Whatsapp
             </a>
@@ -274,7 +278,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div class="especialidades-grid">
             <div
               class="card-especialidade"
-              style="--bg: url('./assets/images/acabamento-premium.png')"
+              style="
+                --bg: url(&quot;./assets/images/acabamento-premium.png&quot;);
+              "
             >
               <h3>Linha Gold</h3>
               <p>
@@ -286,7 +292,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             <div
               class="card-especialidade"
-              style="--bg: url('./assets/images/porta-linha-suprema.png')"
+              style="
+                --bg: url(&quot;./assets/images/porta-linha-suprema.png&quot;);
+              "
             >
               <h3>Linha Suprema</h3>
               <p>
@@ -298,7 +306,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             <div
               class="card-especialidade"
-              style="--bg: url('./assets/images/porta-esquadria-1.png')"
+              style="
+                --bg: url(&quot;./assets/images/porta-esquadria-1.png&quot;);
+              "
             >
               <h3>Portas em Alumínio</h3>
               <p>
@@ -309,7 +319,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             <div
               class="card-especialidade"
-              style="--bg: url('./assets/images/janela-suprema.png')"
+              style="--bg: url(&quot;./assets/images/janela-suprema.png&quot;)"
             >
               <h3>Janelas em Alumínio</h3>
               <p>
@@ -320,7 +330,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             <div
               class="card-especialidade"
-              style="--bg: url('./assets/images/esquadria-vidro-2.png')"
+              style="
+                --bg: url(&quot;./assets/images/esquadria-vidro-2.png&quot;);
+              "
             >
               <h3>Fachadas de Vidro</h3>
               <p>
@@ -331,7 +343,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             <div
               class="card-especialidade"
-              style="--bg: url('./assets/images/guarda-corpo-1.png')"
+              style="--bg: url(&quot;./assets/images/guarda-corpo-1.png&quot;)"
             >
               <h3>Sacadas e Guarda-Corpos</h3>
               <p>
@@ -342,7 +354,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             <div
               class="card-especialidade"
-              style="--bg: url('./assets/images/fechamento-de-area.png')"
+              style="
+                --bg: url(&quot;./assets/images/fechamento-de-area.png&quot;);
+              "
             >
               <h3>Fechamento de Área</h3>
               <p>
@@ -353,7 +367,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             <div
               class="card-especialidade"
-              style="--bg: url('./assets/images/esquadria-vidro-fixo-1.png')"
+              style="
+                --bg: url(&quot;./assets/images/esquadria-vidro-fixo-1.png&quot;);
+              "
             >
               <h3>Medição e Instalação</h3>
               <p>
@@ -365,7 +381,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <a
             href="#"
             class="cta-button"
-            onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')"
+            onclick="
+              return gtag_report_conversion(
+                'https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...',
+              );
+            "
             >Solicitar orçamento pelo Whatsapp</a
           >
         </div>
@@ -456,7 +476,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           </div>
           <a
             href="#"
-            onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')"
+            onclick="
+              return gtag_report_conversion(
+                'https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...',
+              );
+            "
             class="cta-button"
             >Solicitar orçamento pelo Whatsapp</a
           >
@@ -599,7 +623,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <a
             href="#"
             class="cta-button"
-            onclick="return gtag_report_conversion('https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...')"
+            onclick="
+              return gtag_report_conversion(
+                'https://wa.me/5531973222912?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento...',
+              );
+            "
             >Solicitar orçamento pelo Whatsapp</a
           >
         </div>
@@ -705,9 +733,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div class="contato-info">
             <h2>Contato</h2>
             <p>
-              <strong>Endereço:</strong> Rua General José Maria, 220 – Belo
-              Horizonte, MG
+              <strong>Endereço:</strong> Alameda dos Cisnes, n° 116, Bairro
+              Estância do Sereno Ptb, Betim - MG
             </p>
+
             <p><strong>Atendimento em:</strong> Minas Gerais e região</p>
 
             <div class="contato-buttons">
@@ -803,9 +832,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div class="contato-map">
             <!-- Se quiser usar embed Google Maps -->
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.760831922239!2d-44.0584145!3d-19.976557999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6bfb2a92cab7d%3A0xdca2804a5b70a802!2sRua%20General%20Jos%C3%A9%20Maria%2C%20220%20-%20Lind%C3%A9ia%2C%20Belo%20Horizonte%20-%20MG%2C%2030690-680!5e0!3m2!1spt-BR!2sbr!4v1765395085651!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.247364875029!2d-44.14130572354172!3d-19.998130181405745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6c12c82ac09db%3A0xc639e21952ba6be6!2sAl.%20do%20Cisnes%2C%20116%20-%20Est%C3%A2ncia%20do%20Sereno%20Ptb%2C%20Betim%20-%20MG%2C%2032659-152!5e0!3m2!1spt-BR!2sbr!4v1771960569727!5m2!1spt-BR!2sbr"
+              width="600"
               height="450"
-              width="1000"
+              style="border: 0"
+              allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -825,7 +856,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <div class="faq-answer">
               <p>
                 Não! A BN Esquadrias está localizada em Belo Horizonte, mas
-                atendemos **toda Minas Gerais**, levando qualidade e instalação
+                atendemos toda Minas Gerais, levando qualidade e instalação
                 profissional para qualquer região do estado.
               </p>
             </div>
@@ -1040,9 +1071,8 @@ ${mensagem}`;
           const estado = data.region_code || "MG";
 
           if (cidade) {
-            document.getElementById(
-              "localizacao-atendimento"
-            ).innerHTML = `📍 Empresa em <strong>Belo Horizonte – MG</strong>, atendemos <strong>${cidade} – ${estado}</strong> e região.`;
+            document.getElementById("localizacao-atendimento").innerHTML =
+              `📍 Empresa em <strong>Belo Horizonte – MG</strong>, atendemos <strong>${cidade} – ${estado}</strong> e região.`;
           }
         } catch (error) {
           console.warn("Não foi possível detectar a localização");
